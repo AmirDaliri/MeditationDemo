@@ -33,6 +33,12 @@
 		8B5C6C9C260F443B00302627 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6C9B260F443B00302627 /* State.swift */; };
 		8B5C6CA9260F448D00302627 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6CA7260F448D00302627 /* SplashVC.swift */; };
 		8B5C6CAA260F448D00302627 /* SplashVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B5C6CA8260F448D00302627 /* SplashVC.xib */; };
+		8B5C6CB0260F455D00302627 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6CAE260F455D00302627 /* MainVC.swift */; };
+		8B5C6CB1260F455D00302627 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B5C6CAF260F455D00302627 /* MainVC.xib */; };
+		8B5C6CB6260F461300302627 /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6CB5260F461300302627 /* AlertBuilder.swift */; };
+		8B5C6CB9260F462700302627 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6CB8260F462700302627 /* Reachability.swift */; };
+		8B5C6CBC260F463700302627 /* HelperFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6CBB260F463700302627 /* HelperFunction.swift */; };
+		8B5C6CBF260F464300302627 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6CBE260F464300302627 /* Spinner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +70,12 @@
 		8B5C6C9B260F443B00302627 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		8B5C6CA7260F448D00302627 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		8B5C6CA8260F448D00302627 /* SplashVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashVC.xib; sourceTree = "<group>"; };
+		8B5C6CAE260F455D00302627 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		8B5C6CAF260F455D00302627 /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
+		8B5C6CB5260F461300302627 /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
+		8B5C6CB8260F462700302627 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		8B5C6CBB260F463700302627 /* HelperFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunction.swift; sourceTree = "<group>"; };
+		8B5C6CBE260F464300302627 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +129,8 @@
 		8B5C6C50260F407800302627 /* Context */ = {
 			isa = PBXGroup;
 			children = (
-				8B5C6CA7260F448D00302627 /* SplashVC.swift */,
-				8B5C6CA8260F448D00302627 /* SplashVC.xib */,
+				8B5C6CAC260F454E00302627 /* Splash */,
+				8B5C6CB3260F456200302627 /* Main */,
 			);
 			path = Context;
 			sourceTree = "<group>";
@@ -172,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				8B5C6C7D260F42ED00302627 /* Extensions */,
+				8B5C6CC1260F465300302627 /* Utility */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -197,6 +210,35 @@
 				8B5C6C9B260F443B00302627 /* State.swift */,
 			);
 			path = Observable;
+			sourceTree = "<group>";
+		};
+		8B5C6CAC260F454E00302627 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				8B5C6CA7260F448D00302627 /* SplashVC.swift */,
+				8B5C6CA8260F448D00302627 /* SplashVC.xib */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		8B5C6CB3260F456200302627 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8B5C6CAE260F455D00302627 /* MainVC.swift */,
+				8B5C6CAF260F455D00302627 /* MainVC.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8B5C6CC1260F465300302627 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				8B5C6CB5260F461300302627 /* AlertBuilder.swift */,
+				8B5C6CB8260F462700302627 /* Reachability.swift */,
+				8B5C6CBB260F463700302627 /* HelperFunction.swift */,
+				8B5C6CBE260F464300302627 /* Spinner.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B5C6CAA260F448D00302627 /* SplashVC.xib in Resources */,
+				8B5C6CB1260F455D00302627 /* MainVC.xib in Resources */,
 				8B5C6C45260F3EB100302627 /* LaunchScreen.storyboard in Resources */,
 				8B5C6C42260F3EB100302627 /* Assets.xcassets in Resources */,
 			);
@@ -272,6 +315,7 @@
 				8B5C6C88260F43C400302627 /* BaseTableViewCell.swift in Sources */,
 				8B5C6C39260F3EB100302627 /* AppDelegate.swift in Sources */,
 				8B5C6C91260F43EA00302627 /* RoundedShadowView.swift in Sources */,
+				8B5C6CBF260F464300302627 /* Spinner.swift in Sources */,
 				8B5C6C9C260F443B00302627 /* State.swift in Sources */,
 				8B5C6C58260F417100302627 /* ControllerKeys.swift in Sources */,
 				8B5C6CA9260F448D00302627 /* SplashVC.swift in Sources */,
@@ -281,14 +325,18 @@
 				8B5C6C6C260F429F00302627 /* UINavigationController+Extension.swift in Sources */,
 				8B5C6C8B260F43D200302627 /* BaseCollectionViewCell.swift in Sources */,
 				8B5C6C82260F436F00302627 /* BaseVC.swift in Sources */,
+				8B5C6CB9260F462700302627 /* Reachability.swift in Sources */,
 				8B5C6C99260F442E00302627 /* Observable.swift in Sources */,
+				8B5C6CB0260F455D00302627 /* MainVC.swift in Sources */,
 				8B5C6C75260F42C700302627 /* Optional+Extension.swift in Sources */,
 				8B5C6C78260F42D400302627 /* UIView+Extension.swift in Sources */,
 				8B5C6C5B260F417800302627 /* ControllerFactory.swift in Sources */,
 				8B5C6C69260F429000302627 /* UIViewController+Extension.swift in Sources */,
 				8B5C6C3B260F3EB100302627 /* SceneDelegate.swift in Sources */,
+				8B5C6CB6260F461300302627 /* AlertBuilder.swift in Sources */,
 				8B5C6C7B260F42DF00302627 /* UITextField+Extension.swift in Sources */,
 				8B5C6C8E260F43DD00302627 /* BaseView.swift in Sources */,
+				8B5C6CBC260F463700302627 /* HelperFunction.swift in Sources */,
 				8B5C6C96260F442300302627 /* Disposable.swift in Sources */,
 				8B5C6C61260F418500302627 /* NavigationManager.swift in Sources */,
 				8B5C6C72260F42B800302627 /* UIColor+Extension.swift in Sources */,

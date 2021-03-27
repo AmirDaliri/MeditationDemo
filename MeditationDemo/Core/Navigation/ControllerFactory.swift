@@ -22,10 +22,6 @@ class ControllerFactory {
     static func viewController(_ controllerKey: ControllerKey,
                                data: Any? = nil) -> UIViewController? {
         
-        // Special Case
-        if controllerKey == ControllerKeys.main.rawValue {
-            return ControllerFactory.mainController(data)
-        }
         
         if let nClass = kControllerMap[controllerKey]?.classType {
             let controller = nClass.init()
@@ -43,18 +39,5 @@ class ControllerFactory {
         }
         
         return nil
-    }
-    
-    static func mainController(_ data: Any? = nil) -> UITabBarController {
-        var dataArray: [Any]?
-        if let safeData = data {
-            if let dArray = safeData as? [Any] {
-                dataArray = dArray
-            }
-            dataArray = [safeData]
-        }
-        let tabController = ControllerFactory.tabBarController(kControllerTreeKeys,
-                                                               datas: dataArray)
-        return tabController
-    }
+    }    
 }
