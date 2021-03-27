@@ -22,6 +22,12 @@
 		8B5C6C75260F42C700302627 /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6C74260F42C700302627 /* Optional+Extension.swift */; };
 		8B5C6C78260F42D400302627 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6C77260F42D400302627 /* UIView+Extension.swift */; };
 		8B5C6C7B260F42DF00302627 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6C7A260F42DF00302627 /* UITextField+Extension.swift */; };
+		8B5C6C82260F436F00302627 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6C81260F436F00302627 /* BaseVC.swift */; };
+		8B5C6C85260F43AF00302627 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6C84260F43AF00302627 /* BaseVM.swift */; };
+		8B5C6C88260F43C400302627 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6C87260F43C400302627 /* BaseTableViewCell.swift */; };
+		8B5C6C8B260F43D200302627 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6C8A260F43D200302627 /* BaseCollectionViewCell.swift */; };
+		8B5C6C8E260F43DD00302627 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6C8D260F43DD00302627 /* BaseView.swift */; };
+		8B5C6C91260F43EA00302627 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6C90260F43EA00302627 /* RoundedShadowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +48,12 @@
 		8B5C6C74260F42C700302627 /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
 		8B5C6C77260F42D400302627 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		8B5C6C7A260F42DF00302627 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		8B5C6C81260F436F00302627 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		8B5C6C84260F43AF00302627 /* BaseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
+		8B5C6C87260F43C400302627 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		8B5C6C8A260F43D200302627 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		8B5C6C8D260F43DD00302627 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		8B5C6C90260F43EA00302627 /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				8B5C6C63260F422900302627 /* Navigation */,
+				8B5C6C93260F440200302627 /* Generic */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -148,6 +161,19 @@
 				8B5C6C7D260F42ED00302627 /* Extensions */,
 			);
 			path = Misc;
+			sourceTree = "<group>";
+		};
+		8B5C6C93260F440200302627 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				8B5C6C81260F436F00302627 /* BaseVC.swift */,
+				8B5C6C84260F43AF00302627 /* BaseVM.swift */,
+				8B5C6C87260F43C400302627 /* BaseTableViewCell.swift */,
+				8B5C6C8A260F43D200302627 /* BaseCollectionViewCell.swift */,
+				8B5C6C8D260F43DD00302627 /* BaseView.swift */,
+				8B5C6C90260F43EA00302627 /* RoundedShadowView.swift */,
+			);
+			path = Generic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,17 +245,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B5C6C88260F43C400302627 /* BaseTableViewCell.swift in Sources */,
 				8B5C6C39260F3EB100302627 /* AppDelegate.swift in Sources */,
+				8B5C6C91260F43EA00302627 /* RoundedShadowView.swift in Sources */,
 				8B5C6C58260F417100302627 /* ControllerKeys.swift in Sources */,
 				8B5C6C6F260F42AE00302627 /* CALayer+Extension.swift in Sources */,
 				8B5C6C5E260F417E00302627 /* Coordinator.swift in Sources */,
+				8B5C6C85260F43AF00302627 /* BaseVM.swift in Sources */,
 				8B5C6C6C260F429F00302627 /* UINavigationController+Extension.swift in Sources */,
+				8B5C6C8B260F43D200302627 /* BaseCollectionViewCell.swift in Sources */,
+				8B5C6C82260F436F00302627 /* BaseVC.swift in Sources */,
 				8B5C6C75260F42C700302627 /* Optional+Extension.swift in Sources */,
 				8B5C6C78260F42D400302627 /* UIView+Extension.swift in Sources */,
 				8B5C6C5B260F417800302627 /* ControllerFactory.swift in Sources */,
 				8B5C6C69260F429000302627 /* UIViewController+Extension.swift in Sources */,
 				8B5C6C3B260F3EB100302627 /* SceneDelegate.swift in Sources */,
 				8B5C6C7B260F42DF00302627 /* UITextField+Extension.swift in Sources */,
+				8B5C6C8E260F43DD00302627 /* BaseView.swift in Sources */,
 				8B5C6C61260F418500302627 /* NavigationManager.swift in Sources */,
 				8B5C6C72260F42B800302627 /* UIColor+Extension.swift in Sources */,
 			);
