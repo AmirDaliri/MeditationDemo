@@ -38,6 +38,7 @@ class BaseVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        NotificationCenter.default.addObserver(self, selector: #selector(statusManager), name: .flagsChanged, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,6 +83,22 @@ class BaseVC: UIViewController {
             AlertBuilder().message(message)
                 .addCancelAction(title: "OK")
             .show(in: self)
+        }
+    }
+    
+    
+    // MARK: - Reachability Method
+    @objc func statusManager(_ notification: Notification) {
+        switch Network.reachability.status {
+        case .unreachable:
+            AlertBuilder().message("No internet connection. Please try again later.")
+                .addCancelAction(title: "OK")
+            .show(in: self)
+        case .wwan,.wifi:
+            if let topVC = NavigationManager.shared.topViewController(),
+               topVC.isKind(of: UIAlertController.self) {
+                NavigationManager.shared.closeTopController(true, data: false)
+            }
         }
     }
 }
