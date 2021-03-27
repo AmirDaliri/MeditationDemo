@@ -42,9 +42,14 @@ class MainVC: BaseVC {
         super.viewDidLoad()
         
         // I'm Here...
-        isNavigationBarHidden = true
+//        isNavigationBarHidden = true
         bindUI()
         viewModel.getMainData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        isNavigationBarHidden = true
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -88,22 +93,22 @@ extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollec
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return viewModel.itemSize
     }
-
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return viewModel.insetForSectionAt
     }
-
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 16
+        return viewModel.minimumLineSpacingForSection
     }
 
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 4
+        return viewModel.minimumInteritemSpacingForSection
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.didSelectItemAtIndexPath(collectionView, indexPath: indexPath)
+    }
     
     // MARK: - CollectionView Parameters Configure
     func setCollectionViewDataSourceDelegate<D: UICollectionViewDataSource & UICollectionViewDelegate>(_ collectionView: UICollectionView, _ dataSourceDelegate: D) {

@@ -11,10 +11,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="StoriesCollectionViewCell" customModule="MeditationDemo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="120" height="197"/>
+            <rect key="frame" x="0.0" y="0.0" width="120" height="208"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="120" height="197"/>
+                <rect key="frame" x="0.0" y="0.0" width="120" height="208"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xkp-3M-siP">
@@ -23,14 +23,14 @@
                             <constraint firstAttribute="height" constant="160" id="ThO-ad-2jL"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kx4-bD-tg5">
-                        <rect key="frame" x="0.0" y="156.5" width="112" height="19.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kx4-bD-tg5">
+                        <rect key="frame" x="0.0" y="168" width="112" height="20"/>
                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="16"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mN-vI-37Y">
-                        <rect key="frame" x="0.0" y="180" width="120" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mN-vI-37Y">
+                        <rect key="frame" x="0.0" y="192" width="120" height="16"/>
                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="14"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -50,13 +50,13 @@
                 <constraint firstAttribute="trailing" secondItem="kx4-bD-tg5" secondAttribute="trailing" constant="8" id="l9q-PI-hJI"/>
                 <constraint firstItem="kx4-bD-tg5" firstAttribute="top" secondItem="xkp-3M-siP" secondAttribute="bottom" constant="8" id="n75-3b-fZb"/>
             </constraints>
-            <size key="customSize" width="120" height="197"/>
+            <size key="customSize" width="120" height="208"/>
             <connections>
                 <outlet property="categoryLabel" destination="9mN-vI-37Y" id="yk1-vD-h98"/>
                 <outlet property="nameLabel" destination="kx4-bD-tg5" id="NTz-oE-RQ4"/>
                 <outlet property="storyImageView" destination="xkp-3M-siP" id="qeX-rr-MQL"/>
             </connections>
-            <point key="canvasLocation" x="-104.34782608695653" y="175.78125"/>
+            <point key="canvasLocation" x="-104.34782608695653" y="179.46428571428569"/>
         </collectionViewCell>
     </objects>
 </document>

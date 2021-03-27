@@ -11,11 +11,13 @@ typealias ControllerKey = String
 
 let kControllerMap: [ ControllerKey: (classType: UIViewController.Type, title: String)] =
     [
-        ControllerKeys.main.rawValue: (MainVC.self, "")
+        ControllerKeys.main.rawValue: (MainVC.self, ""),
+        ControllerKeys.detail.rawValue: (DetailVC.self, "")
     ]
 
 enum ControllerKeys: ControllerKey {
     case main
+    case detail
 }
 
 var kControllerTree: [ControllerKey: (index: Int, iconName: String)] = [:]

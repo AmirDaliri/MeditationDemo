@@ -9,7 +9,7 @@ import Foundation
 
 extension String {
     
-    func timeStampToDate(with format: String = "yyyy-MM-dd' 'HH:mm") -> String? {
+    func timeStampToDate(with format: String = "yyyy-MM-dd, EEEE") -> String? {
         guard let timeResult = Double(self) else {
             return nil
         }

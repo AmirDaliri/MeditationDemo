@@ -9,9 +9,9 @@ import UIKit
 import Kingfisher
 
 extension UIImageView {
-    func setImage(urlString: String?) {
+    func setImage(urlString: String?, cornerRadius: CGFloat = 8) {
         guard let url = URL(string: urlString ?? "") else { return }
-        let processor = RoundCornerImageProcessor(cornerRadius: 8)
+        let processor = RoundCornerImageProcessor(cornerRadius: cornerRadius)
         self.kf.indicatorType = .activity
         self.kf.setImage(
             with: url,

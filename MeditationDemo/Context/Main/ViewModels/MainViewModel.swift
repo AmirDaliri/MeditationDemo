@@ -33,8 +33,6 @@ class MainViewModel: BaseVM {
         }
     }
     
-    let insetForSectionAt = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16 )
-    let itemSize = CGSize(width: 156, height: 220)
     var isBannerEnabled: Bool {
         return responseModel.isBannerEnabled ?? false
     }
@@ -64,6 +62,11 @@ class MainViewModel: BaseVM {
     }
     
     // MARK: - collection View Method
+    let insetForSectionAt = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16 )
+    let itemSize = CGSize(width: 156, height: 220)
+    let minimumLineSpacingForSection: CGFloat = 16
+    let minimumInteritemSpacingForSection: CGFloat = 4
+    
     func numberOfItemsInSection(_ collectionView: UICollectionView, section: Int) -> Int {
         if collectionView.tag == 0 {
             return storiesCount
@@ -81,6 +84,14 @@ class MainViewModel: BaseVM {
             let cell: MeditationsCollectionViewCell = (collectionView.dequeueReusableCell(withReuseIdentifier: MeditationsCollectionViewCell.reuseIdentifier, for: indexPath as IndexPath) as? MeditationsCollectionViewCell)!
             cell.viewModel = createMeditationsCellViewModel(indexPath.row)
             return cell
+        }
+    }
+    
+    func didSelectItemAtIndexPath(_ collectionView: UICollectionView, indexPath: IndexPath) {
+        if collectionView.tag == 0 {
+            Coordinator.shared.requestNavigation(.detail, data: storyAtIndex(indexPath.row))
+        } else {
+            Coordinator.shared.requestNavigation(.detail, data: meditationAtIndex(indexPath.row))
         }
     }
 }

@@ -6,13 +6,6 @@
 //
 
 import UIKit
-import CoreData
-
-enum NavigationBarButtonType: Int {
-    case favorites = 1
-    case favorite = 2
-    case unFavorite = 3
-}
 
 class BaseVC: UIViewController {
             
@@ -24,7 +17,20 @@ class BaseVC: UIViewController {
     // MARK: Preferred View Controller Styles
     var isNavigationBarHidden: Bool = false {
         didSet {
-            configureNavigationBar()
+            if !isNavigationBarHidden {
+                navigationController?.navigationBar.barTintColor = UIColor.black.withAlphaComponent(0.6)
+                navigationController?.navigationBar.tintColor = .white
+                navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+                navigationController?.navigationBar.isHidden = false
+            } else {
+                navigationController?.navigationBar.isHidden = true
+            }
+        }
+    }
+    
+    var isNavigationBarTransparent: Bool = false {
+        didSet {
+            configureNavigationBarTransparently()
         }
     }
     
@@ -63,15 +69,28 @@ class BaseVC: UIViewController {
     // MARK: - Configure NavigationBar
     func configureNavigationBar() {
         if !isNavigationBarHidden {
-            navigationController?.navigationBar.shadowImage = UIImage()
-            navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-            navigationController?.navigationBar.barTintColor = .white
-            navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 0.5254901961, blue: 0, alpha: 1)
+            navigationController?.navigationBar.barTintColor = .black
+            navigationController?.navigationBar.tintColor = .red
             navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+            navigationController?.navigationBar.isHidden = false
         } else {
             navigationController?.navigationBar.isHidden = true
         }
     }
+    
+    func configureNavigationBarTransparently() {
+        if self.isNavigationBarTransparent {
+            navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+            navigationController?.navigationBar.isTranslucent = true
+            navigationController?.navigationBar.shadowImage = UIImage()
+        } else {
+            navigationController?.navigationBar.tintColor = UIColor.white
+            navigationController?.navigationBar.barTintColor = UIColor.black.withAlphaComponent(0.6)
+            navigationController?.navigationBar.isOpaque = false
+            navigationController?.navigationBar.isTranslucent = false
+        }
+    }
+
     
     //MARK: - this function configured for use in bindUI error case.
     public func handleAlertView(title: String?, message: String) {
