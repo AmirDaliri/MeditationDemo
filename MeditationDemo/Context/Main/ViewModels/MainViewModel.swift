@@ -33,6 +33,8 @@ class MainViewModel: BaseVM {
         }
     }
     
+    let insetForSectionAt = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16 )
+    let itemSize = CGSize(width: 156, height: 220)
     var isBannerEnabled: Bool {
         return responseModel.isBannerEnabled ?? false
     }
@@ -62,37 +64,23 @@ class MainViewModel: BaseVM {
     }
     
     // MARK: - collection View Method
-    func numberOfItemsInSection(section: Int) -> Int {
-        switch section {
-        case 0:
+    func numberOfItemsInSection(_ collectionView: UICollectionView, section: Int) -> Int {
+        if collectionView.tag == 0 {
             return storiesCount
-        case 1:
-            return isBannerEnabled ? 1:0
-        case 2:
+        } else {
             return meditationsCount
-        default:
-            return 0
         }
     }
     
     func cellForItemAt(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
-        switch indexPath.section {
-        case 0:
+        if collectionView.tag == 0 {
             let cell: StoriesCollectionViewCell = (collectionView.dequeueReusableCell(withReuseIdentifier: StoriesCollectionViewCell.reuseIdentifier, for: indexPath as IndexPath) as? StoriesCollectionViewCell)!
             cell.viewModel = createStoriesCellViewModel(indexPath.row)
-            cell.backgroundColor = .red
             return cell
-        case 1:
-            let cell: BannerCollectionViewCell = (collectionView.dequeueReusableCell(withReuseIdentifier: BannerCollectionViewCell.reuseIdentifier, for: indexPath as IndexPath) as? BannerCollectionViewCell)!
-            cell.backgroundColor = .blue
-            return cell
-        case 2:
+        } else {
             let cell: MeditationsCollectionViewCell = (collectionView.dequeueReusableCell(withReuseIdentifier: MeditationsCollectionViewCell.reuseIdentifier, for: indexPath as IndexPath) as? MeditationsCollectionViewCell)!
             cell.viewModel = createMeditationsCellViewModel(indexPath.row)
-            cell.backgroundColor = .yellow
             return cell
-        default:
-            return UICollectionViewCell()
         }
     }
 }

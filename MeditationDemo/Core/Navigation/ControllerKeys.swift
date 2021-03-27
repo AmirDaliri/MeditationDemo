@@ -11,12 +11,10 @@ typealias ControllerKey = String
 
 let kControllerMap: [ ControllerKey: (classType: UIViewController.Type, title: String)] =
     [
-        ControllerKeys.splash.rawValue: (SplashVC.self, ""),
         ControllerKeys.main.rawValue: (MainVC.self, "")
     ]
 
 enum ControllerKeys: ControllerKey {
-    case splash
     case main
 }
 

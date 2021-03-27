@@ -64,7 +64,7 @@ class Coordinator {
                 return
             }
             let window = UIWindow(windowScene: windowScene)
-            let controller = ControllerFactory.viewController(ControllerKeys.splash.rawValue, data: nil)
+            let controller = ControllerFactory.viewController(ControllerKeys.main.rawValue, data: nil)
             let navController = ControllerFactory.navigationController(controller!)
             window.rootViewController = navController
             sceneDelegate.window = window
@@ -72,7 +72,7 @@ class Coordinator {
         } else {
             // Fallback on earlier versions
             if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-                let controller = ControllerFactory.viewController(ControllerKeys.splash.rawValue, data: nil)
+                let controller = ControllerFactory.viewController(ControllerKeys.main.rawValue, data: nil)
                 let navController = ControllerFactory.navigationController(controller!)
                 appDelegate.window?.rootViewController?.dismiss(animated: false, completion: nil)
                 appDelegate.window?.rootViewController = navController

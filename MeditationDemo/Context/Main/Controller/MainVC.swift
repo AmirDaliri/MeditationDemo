@@ -10,9 +10,25 @@ import UIKit
 class MainVC: BaseVC {
 
     //MARK: - IBOutlets
-    @IBOutlet private weak var collectionView: UICollectionView! {
+    @IBOutlet private weak var storyCollectionView: UICollectionView! {
         didSet {
-            setCollectionViewDataSourceDelegate(self)
+            storyCollectionView.tag = 0
+            storyCollectionView.register(cellClass: StoriesCollectionViewCell.self)
+            setCollectionViewDataSourceDelegate(storyCollectionView, self)
+        }
+    }
+    @IBOutlet private weak var bannerContainerView: UIView!
+    @IBOutlet private weak var bannerView: UIView! {
+        didSet {
+            bannerView.layer.cornerRadius = 4
+            bannerView.layer.masksToBounds = true
+        }
+    }
+    @IBOutlet private weak var meditationsCollectionView: UICollectionView! {
+        didSet {
+            meditationsCollectionView.tag = 1
+            meditationsCollectionView.register(cellClass: MeditationsCollectionViewCell.self)
+            setCollectionViewDataSourceDelegate(meditationsCollectionView, self)
         }
     }
     
@@ -51,7 +67,9 @@ class MainVC: BaseVC {
     }
     
     private func updateUI() {
-        collectionView.reloadData()
+        bannerContainerView.isHidden = !viewModel.isBannerEnabled
+        storyCollectionView.reloadData()
+        meditationsCollectionView.reloadData()
     }
 }
 
@@ -59,33 +77,36 @@ class MainVC: BaseVC {
 
 extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.numberOfItemsInSection(section: section)
+        return viewModel.numberOfItemsInSection(collectionView, section: section)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return viewModel.cellForItemAt(collectionView, indexPath: indexPath)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//    return CGSize(width:collectionView.frame.size.width, height:100)
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return viewModel.itemSize
+    }
+
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return viewModel.insetForSectionAt
+    }
+
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 16
+    }
+
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 4
+    }
 
     
     // MARK: - CollectionView Parameters Configure
-    func setCollectionViewDataSourceDelegate<D: UICollectionViewDataSource & UICollectionViewDelegate>(_ dataSourceDelegate: D) {
-        collectionView.register(cellClass: StoriesCollectionViewCell.self)
-        collectionView.register(cellClass: BannerCollectionViewCell.self)
-        collectionView.register(cellClass: MeditationsCollectionViewCell.self)
-        
-        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.scrollDirection = .horizontal
-        }
-
+    func setCollectionViewDataSourceDelegate<D: UICollectionViewDataSource & UICollectionViewDelegate>(_ collectionView: UICollectionView, _ dataSourceDelegate: D) {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.decelerationRate = .fast
         collectionView.dataSource = dataSourceDelegate
