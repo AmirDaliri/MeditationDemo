@@ -44,7 +44,7 @@ class NetworkingTest: XCTestCase {
     }
     
     func testFethGames() {
-        MainRequests.shared.getMainRequests { (response, error) in
+        MainRequests.shared.getMainAppData { (response, error) in
             XCTAssertNotNil(response)
         }
     }

@@ -42,7 +42,6 @@ class MainVC: BaseVC {
         super.viewDidLoad()
         
         // I'm Here...
-//        isNavigationBarHidden = true
         bindUI()
         viewModel.getMainData()
     }
