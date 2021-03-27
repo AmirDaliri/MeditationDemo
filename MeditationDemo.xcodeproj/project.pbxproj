@@ -31,6 +31,8 @@
 		8B5C6C96260F442300302627 /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6C95260F442300302627 /* Disposable.swift */; };
 		8B5C6C99260F442E00302627 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6C98260F442E00302627 /* Observable.swift */; };
 		8B5C6C9C260F443B00302627 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6C9B260F443B00302627 /* State.swift */; };
+		8B5C6CA9260F448D00302627 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6CA7260F448D00302627 /* SplashVC.swift */; };
+		8B5C6CAA260F448D00302627 /* SplashVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B5C6CA8260F448D00302627 /* SplashVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		8B5C6C95260F442300302627 /* Disposable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
 		8B5C6C98260F442E00302627 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		8B5C6C9B260F443B00302627 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		8B5C6CA7260F448D00302627 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		8B5C6CA8260F448D00302627 /* SplashVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 		8B5C6C50260F407800302627 /* Context */ = {
 			isa = PBXGroup;
 			children = (
+				8B5C6CA7260F448D00302627 /* SplashVC.swift */,
+				8B5C6CA8260F448D00302627 /* SplashVC.xib */,
 			);
 			path = Context;
 			sourceTree = "<group>";
@@ -250,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B5C6CAA260F448D00302627 /* SplashVC.xib in Resources */,
 				8B5C6C45260F3EB100302627 /* LaunchScreen.storyboard in Resources */,
 				8B5C6C42260F3EB100302627 /* Assets.xcassets in Resources */,
 			);
@@ -267,6 +274,7 @@
 				8B5C6C91260F43EA00302627 /* RoundedShadowView.swift in Sources */,
 				8B5C6C9C260F443B00302627 /* State.swift in Sources */,
 				8B5C6C58260F417100302627 /* ControllerKeys.swift in Sources */,
+				8B5C6CA9260F448D00302627 /* SplashVC.swift in Sources */,
 				8B5C6C6F260F42AE00302627 /* CALayer+Extension.swift in Sources */,
 				8B5C6C5E260F417E00302627 /* Coordinator.swift in Sources */,
 				8B5C6C85260F43AF00302627 /* BaseVM.swift in Sources */,

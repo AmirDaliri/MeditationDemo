@@ -10,6 +10,19 @@ import UIKit
 typealias ControllerKey = String
 
 let kControllerMap: [ ControllerKey: (classType: UIViewController.Type, title: String)] =
-    []
+    [
+        ControllerKeys.splash.rawValue: (SplashVC.self, "")
 
-enum ControllerKeys: ControllerKey {}
+    ]
+
+enum ControllerKeys: ControllerKey {
+    case splash
+}
+
+var kControllerTree: [ControllerKey: (index: Int, iconName: String)] = [:]
+var kControllerTreeKeys: [ControllerKey] {
+    return kControllerTree.keys.sorted { kControllerTree[$0]!.index < kControllerTree[$1]!.index }
+}
+var kControllerTreeCenterItem: ControllerKey {
+    return kControllerTree.filter({$0.value.index == 1}).first!.0
+}

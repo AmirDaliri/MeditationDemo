@@ -90,25 +90,6 @@ class Coordinator {
         exit(0)
     }
     
-    // MARK: - Tabbar Method
-    func requestTab(from: UIViewController, controllerKey: ControllerKeys) {
-        let key = controllerKey.rawValue
-        if kControllerTreeKeys.contains(key) {
-            if key != from.controllerKey {
-                if let tabController = from.tabBarController as? MainTabbarViewController {
-                    switch controllerKey {
-                    case .stations:
-                        tabController.selectedItemIndex = 0
-                    case .faves:
-                        tabController.selectedItemIndex = 1
-                    default:
-                        break
-                    }
-                }
-            }
-        }
-        NavigationManager.shared.popToRootNavigationVC()
-    }
     
     func removeControllersInNavigation(_ keys: [ControllerKey]) {
         guard let topViewController =  NavigationManager.shared.topViewController() else { return }
