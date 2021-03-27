@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		8B5C6C39260F3EB100302627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6C38260F3EB100302627 /* AppDelegate.swift */; };
 		8B5C6C3B260F3EB100302627 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6C3A260F3EB100302627 /* SceneDelegate.swift */; };
-		8B5C6C3D260F3EB100302627 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6C3C260F3EB100302627 /* ViewController.swift */; };
-		8B5C6C40260F3EB100302627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B5C6C3E260F3EB100302627 /* Main.storyboard */; };
 		8B5C6C42260F3EB100302627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B5C6C41260F3EB100302627 /* Assets.xcassets */; };
 		8B5C6C45260F3EB100302627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B5C6C43260F3EB100302627 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +17,6 @@
 		8B5C6C35260F3EB100302627 /* MeditationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeditationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B5C6C38260F3EB100302627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B5C6C3A260F3EB100302627 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8B5C6C3C260F3EB100302627 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8B5C6C3F260F3EB100302627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B5C6C41260F3EB100302627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B5C6C44260F3EB100302627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B5C6C46260F3EB200302627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +52,37 @@
 		8B5C6C37260F3EB100302627 /* MeditationDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8B5C6C4E260F406C00302627 /* App */,
+				8B5C6C50260F407800302627 /* Context */,
+				8B5C6C53260F40B000302627 /* Resources */,
+			);
+			path = MeditationDemo;
+			sourceTree = "<group>";
+		};
+		8B5C6C4E260F406C00302627 /* App */ = {
+			isa = PBXGroup;
+			children = (
 				8B5C6C38260F3EB100302627 /* AppDelegate.swift */,
 				8B5C6C3A260F3EB100302627 /* SceneDelegate.swift */,
-				8B5C6C3C260F3EB100302627 /* ViewController.swift */,
-				8B5C6C3E260F3EB100302627 /* Main.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8B5C6C50260F407800302627 /* Context */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Context;
+			sourceTree = "<group>";
+		};
+		8B5C6C53260F40B000302627 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				8B5C6C41260F3EB100302627 /* Assets.xcassets */,
 				8B5C6C43260F3EB100302627 /* LaunchScreen.storyboard */,
 				8B5C6C46260F3EB200302627 /* Info.plist */,
 			);
-			path = MeditationDemo;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +144,6 @@
 			files = (
 				8B5C6C45260F3EB100302627 /* LaunchScreen.storyboard in Resources */,
 				8B5C6C42260F3EB100302627 /* Assets.xcassets in Resources */,
-				8B5C6C40260F3EB100302627 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +154,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B5C6C3D260F3EB100302627 /* ViewController.swift in Sources */,
 				8B5C6C39260F3EB100302627 /* AppDelegate.swift in Sources */,
 				8B5C6C3B260F3EB100302627 /* SceneDelegate.swift in Sources */,
 			);
@@ -146,14 +162,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8B5C6C3E260F3EB100302627 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8B5C6C3F260F3EB100302627 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8B5C6C43260F3EB100302627 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,7 +296,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N9UP838S78;
-				INFOPLIST_FILE = MeditationDemo/Info.plist;
+				INFOPLIST_FILE = MeditationDemo/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -308,7 +316,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N9UP838S78;
-				INFOPLIST_FILE = MeditationDemo/Info.plist;
+				INFOPLIST_FILE = MeditationDemo/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
