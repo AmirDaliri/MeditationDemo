@@ -7,8 +7,8 @@
 
 import Foundation
 
-class StationsRequest: NSObject {
-    static let shared = StationsRequest()
+class MainRequests: NSObject {
+    static let shared = MainRequests()
     
     fileprivate let router = Router<ApiRouter>()
     fileprivate let networkManager = NetworkManager()
