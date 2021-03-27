@@ -13,6 +13,7 @@ class SplashVC: BaseVC {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        Coordinator.shared.requestPresent(.main)
     }
 
 

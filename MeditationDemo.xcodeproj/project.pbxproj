@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -59,6 +59,18 @@
 		8B5C6D1E260F54FF00302627 /* MeditationDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6D1D260F54FF00302627 /* MeditationDemoTests.swift */; };
 		8B5C6D28260F553600302627 /* NetworkingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6D27260F553600302627 /* NetworkingTest.swift */; };
 		8B5C6D2C260F55EC00302627 /* MainResponseModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6D2B260F55EC00302627 /* MainResponseModelTest.swift */; };
+		8B5C6D30260F588700302627 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6D2F260F588700302627 /* MainViewModel.swift */; };
+		8B5C6D3F260F5C6700302627 /* StoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6D3D260F5C6700302627 /* StoriesCollectionViewCell.swift */; };
+		8B5C6D40260F5C6700302627 /* StoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B5C6D3E260F5C6700302627 /* StoriesCollectionViewCell.xib */; };
+		8B5C6D47260F5C7800302627 /* MeditationsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6D45260F5C7800302627 /* MeditationsCollectionViewCell.swift */; };
+		8B5C6D48260F5C7800302627 /* MeditationsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B5C6D46260F5C7800302627 /* MeditationsCollectionViewCell.xib */; };
+		8B5C6D56260F5CDD00302627 /* StoriesCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6D55260F5CDD00302627 /* StoriesCellViewModel.swift */; };
+		8B5C6D5A260F5CF000302627 /* MeditationsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6D59260F5CF000302627 /* MeditationsCellViewModel.swift */; };
+		8B5C6D5E260F62E100302627 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6D5D260F62E100302627 /* String+Extension.swift */; };
+		8B5C6D67260F68F500302627 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6D65260F68F500302627 /* BannerCollectionViewCell.swift */; };
+		8B5C6D68260F68F500302627 /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B5C6D66260F68F500302627 /* BannerCollectionViewCell.xib */; };
+		8B5C6D6C260F7A6400302627 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5C6D6B260F7A6400302627 /* UIImageView+Extension.swift */; };
+		8B5C6D71260F7B4A00302627 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8B5C6D70260F7B4A00302627 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +140,17 @@
 		8B5C6D1F260F54FF00302627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B5C6D27260F553600302627 /* NetworkingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTest.swift; sourceTree = "<group>"; };
 		8B5C6D2B260F55EC00302627 /* MainResponseModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResponseModelTest.swift; sourceTree = "<group>"; };
+		8B5C6D2F260F588700302627 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		8B5C6D3D260F5C6700302627 /* StoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		8B5C6D3E260F5C6700302627 /* StoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoriesCollectionViewCell.xib; sourceTree = "<group>"; };
+		8B5C6D45260F5C7800302627 /* MeditationsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationsCollectionViewCell.swift; sourceTree = "<group>"; };
+		8B5C6D46260F5C7800302627 /* MeditationsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationsCollectionViewCell.xib; sourceTree = "<group>"; };
+		8B5C6D55260F5CDD00302627 /* StoriesCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCellViewModel.swift; sourceTree = "<group>"; };
+		8B5C6D59260F5CF000302627 /* MeditationsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationsCellViewModel.swift; sourceTree = "<group>"; };
+		8B5C6D5D260F62E100302627 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		8B5C6D65260F68F500302627 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		8B5C6D66260F68F500302627 /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
+		8B5C6D6B260F7A6400302627 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B5C6D71260F7B4A00302627 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +263,8 @@
 				8B5C6C77260F42D400302627 /* UIView+Extension.swift */,
 				8B5C6C7A260F42DF00302627 /* UITextField+Extension.swift */,
 				8B5C6CFD260F52CE00302627 /* URLSession+Extensions.swift */,
+				8B5C6D5D260F62E100302627 /* String+Extension.swift */,
+				8B5C6D6B260F7A6400302627 /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -287,9 +313,11 @@
 		8B5C6CB3260F456200302627 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				8B5C6D0F260F541300302627 /* Controller */,
 				8B5C6D14260F545900302627 /* Services */,
-				8B5C6D0C260F53EC00302627 /* Model */,
+				8B5C6D0F260F541300302627 /* Controller */,
+				8B5C6D0C260F53EC00302627 /* Models */,
+				8B5C6D4B260F5C8400302627 /* Views */,
+				8B5C6D4E260F5CA300302627 /* ViewModels */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -355,7 +383,7 @@
 			path = Encoding;
 			sourceTree = "<group>";
 		};
-		8B5C6D0C260F53EC00302627 /* Model */ = {
+		8B5C6D0C260F53EC00302627 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				8B5C6CF8260F527400302627 /* MainResponseModel.swift */,
@@ -363,7 +391,7 @@
 				8B5C6D03260F532400302627 /* ImageModel.swift */,
 				8B5C6D06260F536500302627 /* StoryModel.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		8B5C6D0F260F541300302627 /* Controller */ = {
@@ -394,6 +422,29 @@
 			path = MeditationDemoTests;
 			sourceTree = "<group>";
 		};
+		8B5C6D4B260F5C8400302627 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8B5C6D3D260F5C6700302627 /* StoriesCollectionViewCell.swift */,
+				8B5C6D3E260F5C6700302627 /* StoriesCollectionViewCell.xib */,
+				8B5C6D65260F68F500302627 /* BannerCollectionViewCell.swift */,
+				8B5C6D66260F68F500302627 /* BannerCollectionViewCell.xib */,
+				8B5C6D45260F5C7800302627 /* MeditationsCollectionViewCell.swift */,
+				8B5C6D46260F5C7800302627 /* MeditationsCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8B5C6D4E260F5CA300302627 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8B5C6D2F260F588700302627 /* MainViewModel.swift */,
+				8B5C6D55260F5CDD00302627 /* StoriesCellViewModel.swift */,
+				8B5C6D59260F5CF000302627 /* MeditationsCellViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -410,6 +461,9 @@
 			dependencies = (
 			);
 			name = MeditationDemo;
+			packageProductDependencies = (
+				8B5C6D70260F7B4A00302627 /* Kingfisher */,
+			);
 			productName = MeditationDemo;
 			productReference = 8B5C6C35260F3EB100302627 /* MeditationDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -459,6 +513,9 @@
 				Base,
 			);
 			mainGroup = 8B5C6C2C260F3EB100302627;
+			packageReferences = (
+				8B5C6D6F260F7B4A00302627 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 8B5C6C36260F3EB100302627 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -474,9 +531,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B5C6D40260F5C6700302627 /* StoriesCollectionViewCell.xib in Resources */,
 				8B5C6CAA260F448D00302627 /* SplashVC.xib in Resources */,
 				8B5C6CB1260F455D00302627 /* MainVC.xib in Resources */,
 				8B5C6C45260F3EB100302627 /* LaunchScreen.storyboard in Resources */,
+				8B5C6D48260F5C7800302627 /* MeditationsCollectionViewCell.xib in Resources */,
+				8B5C6D68260F68F500302627 /* BannerCollectionViewCell.xib in Resources */,
 				8B5C6C42260F3EB100302627 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +563,7 @@
 				8B5C6CF9260F527400302627 /* MainResponseModel.swift in Sources */,
 				8B5C6C91260F43EA00302627 /* RoundedShadowView.swift in Sources */,
 				8B5C6CBF260F464300302627 /* Spinner.swift in Sources */,
+				8B5C6D56260F5CDD00302627 /* StoriesCellViewModel.swift in Sources */,
 				8B5C6C9C260F443B00302627 /* State.swift in Sources */,
 				8B5C6CFE260F52CE00302627 /* URLSession+Extensions.swift in Sources */,
 				8B5C6C58260F417100302627 /* ControllerKeys.swift in Sources */,
@@ -512,10 +573,15 @@
 				8B5C6CD4260F4F3500302627 /* Router.swift in Sources */,
 				8B5C6C5E260F417E00302627 /* Coordinator.swift in Sources */,
 				8B5C6C85260F43AF00302627 /* BaseVM.swift in Sources */,
+				8B5C6D67260F68F500302627 /* BannerCollectionViewCell.swift in Sources */,
+				8B5C6D5A260F5CF000302627 /* MeditationsCellViewModel.swift in Sources */,
 				8B5C6C6C260F429F00302627 /* UINavigationController+Extension.swift in Sources */,
 				8B5C6C8B260F43D200302627 /* BaseCollectionViewCell.swift in Sources */,
 				8B5C6CC7260F4F0200302627 /* NetworkManager.swift in Sources */,
 				8B5C6CEB260F4FDE00302627 /* JSONParameterEncoder.swift in Sources */,
+				8B5C6D30260F588700302627 /* MainViewModel.swift in Sources */,
+				8B5C6D47260F5C7800302627 /* MeditationsCollectionViewCell.swift in Sources */,
+				8B5C6D5E260F62E100302627 /* String+Extension.swift in Sources */,
 				8B5C6CD7260F4F3C00302627 /* HTTPMethod.swift in Sources */,
 				8B5C6CF3260F522C00302627 /* JSONSchemaSupport.swift in Sources */,
 				8B5C6D04260F532400302627 /* ImageModel.swift in Sources */,
@@ -535,7 +601,9 @@
 				8B5C6CB6260F461300302627 /* AlertBuilder.swift in Sources */,
 				8B5C6C7B260F42DF00302627 /* UITextField+Extension.swift in Sources */,
 				8B5C6C8E260F43DD00302627 /* BaseView.swift in Sources */,
+				8B5C6D3F260F5C6700302627 /* StoriesCollectionViewCell.swift in Sources */,
 				8B5C6CBC260F463700302627 /* HelperFunction.swift in Sources */,
+				8B5C6D6C260F7A6400302627 /* UIImageView+Extension.swift in Sources */,
 				8B5C6C96260F442300302627 /* Disposable.swift in Sources */,
 				8B5C6C61260F418500302627 /* NavigationManager.swift in Sources */,
 				8B5C6C72260F42B800302627 /* UIColor+Extension.swift in Sources */,
@@ -802,6 +870,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8B5C6D6F260F7B4A00302627 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8B5C6D70260F7B4A00302627 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B5C6D6F260F7B4A00302627 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8B5C6C2D260F3EB100302627 /* Project object */;
 }

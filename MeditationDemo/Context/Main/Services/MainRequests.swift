@@ -13,7 +13,7 @@ class MainRequests: NSObject {
     fileprivate let router = Router<ApiRouter>()
     fileprivate let networkManager = NetworkManager()
 
-    func getStationsList(_ completion: @escaping (_ stations: MainResponseModel?,_ error: String?)->()){
+    func getMainAppData(_ completion: @escaping (_ data: MainResponseModel?,_ error: String?)->()){
         router.request(.getMainData) { data, response, error in
             if error != nil {
                 completion(nil, "Please check your network connection.")
